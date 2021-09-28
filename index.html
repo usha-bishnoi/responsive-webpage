@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="sidebar" id="mySidenav">
+    <a href="javascript:void(0);" class="icon left" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a class="center logo" href="#home" id="home ">Lorem Ipsum</a>
+    <a href="javascript:void(0);" class="icon right">
+      <i class="fa fa-shopping-cart"></i>
+    </a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Cuisine</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+    <a href="#">Book</a>
+    <button id="cart-button"> Cart </button>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="first-section">
+        <div class="first">
+          <h2>What are you having for Lunch?</h2>
+        </div>
+        <div class="second">
+          <div class="detail-block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div>
+          <img src="assets/montano.jpeg">
+          <p>Mexican Taco</p>
+        </div>
+        <div>
+          <img src="assets/pizza.jpeg">
+          <p>Farmhouse Pizza</p>
+        </div>
+        <div>
+          <img src="assets/burger.jpeg">
+          <p>Chicken Burger</p>
+        </div>
+        <div>
+          <img src="assets/nachos.jpeg">
+          <p>Loaded Nachos</p>
+        </div>
+        <div>
+          <img src="assets/noodles.jpeg">
+          <p>Hakka Noodles</p>
+        </div>
+      </div>
+      <div class="last-detail-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("mySidenav");
+      if (x.className === "sidebar") {
+        x.className += " responsive";
+      } else {
+        x.className = "sidebar";
+      }
+    }
+  </script>
+</body>
+
+</html>

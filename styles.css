@@ -1,0 +1,182 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Scheherazade New', serif;
+	background-color: whitesmoke;
+}
+
+body {
+	margin: 0;
+	font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+	margin: 0;
+	padding: 20px;
+	width: 200px;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+.sidebar a {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+	line-height: 32px;
+}
+
+.logo {
+	font-size: 36px;
+	font-weight: 600;
+}
+
+#cart-button {
+	padding: 10px;
+	background-color: #f70f3a;
+	border-radius: 20px;
+	color: white;
+	border: 0px;
+	width: 100px;
+	height: 40px;
+	position: fixed;
+	bottom: 10px;
+	left: 50px;
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.sidebar a.active {
+	background-color: lightgray;
+	color: white;
+}
+
+.sidebar .icon {
+	display: none;
+}
+
+.sidebar a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
+
+div.content {
+	margin-left: 200px;
+	padding: 1px 16px;
+	height: 1000px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.first {
+	width: 70%;
+	padding: 20px;
+	font-size: 3rem;
+}
+
+.first h2 {
+	margin: 0;
+}
+
+.first-section {
+	display: flex;
+	justify-content: space-around;
+}
+
+.second {
+	width: 30%;
+}
+
+.main {
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.main div {
+	width: 200px;
+	height: 250px;
+	border-radius: 25px;
+	margin: 15px;
+	background-color: white;
+}
+
+.main div img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 25px 25px 0;
+}
+
+.main div p {
+	text-align: center;
+	background-color: white;
+	margin: 10px;
+}
+
+.detail-block {
+	padding: 4rem 20px;
+}
+
+.last-detail-block {
+	display: none;
+}
+
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	div.content {
+		margin-left: 0;
+	}
+	.sidebar a:not(:first-child),
+	.sidebar #cart-button {
+		display: none;
+	}
+	.sidebar {
+		text-align: center;
+	}
+	.sidebar a.left {
+		float: left;
+		display: block;
+	}
+	.sidebar a.center {
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.sidebar a.right {
+		float: right;
+		display: block;
+	}
+	.sidebar.responsive {
+		position: relative;
+	}
+	.sidebar.responsive .icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.sidebar.responsive a {
+		float: none;
+		display: block;
+		text-align: center;
+	}
+	.sidebar.responsive .right {
+		display: none;
+	}
+	.row {
+		flex-direction: column;
+	}
+	.last-detail-block {
+		display: block;
+	}
+	.detail-block {
+		display: none;
+	}
+}
